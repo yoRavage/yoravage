@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">FLOW+</div>
+        <ul class="nav-links">
+          <li><a href="login.html">Home</a></li>
+          <li><a href="account.html">My Account</a></li>
+          <li><a href="index.html">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="container">
+    <div class="main-page">
+  </div>
+  
+
+
+  <div class="container">
+    
+    <div class="main-page">
+      <div class="top-area">
+        <img src="https://res.cloudinary.com/jerrick/image/upload/v1557592993/dlqiyhyfojxdq16yyl2y.jpg" alt="Show Image" id="slideshow">
+      </div>
+
+
+      <div class="thumbnails">
+        <img src="https://cdn.noitatnemucod.net/thumbnail/300x400/100/0f474e6ea130efd9372f913356037955.jpg" alt="Thumbnail 1">
+        <img src="https://cdn.noitatnemucod.net/thumbnail/300x400/100/fced51e392ffd80041b3a1581ba7de2f.jpg" alt="Thumbnail 2">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWFkZWQyNGEtYTFkYy00ODk3LTk1MjQtNWVhYTBhMTI4NDQ0XkEyXkFqcGdeQXVyMTM1MTY3NTQ1._V1_.jpg" alt="Thumbnail 3">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWE1MmVlZGQtYmU5YS00ZjM5LWE1MzItZjEyN2U4MmQ2MTY1XkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg" alt="Thumbnail 4">     
+    </div>
+</div>
+            
+
+<script>
+  // Get all thumbnail images
+  const thumbnails = document.querySelectorAll('.thumbnails img');
+
+  // Add click event listener to each thumbnail
+  thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+          // Navigate to video_page.html
+          window.location.href = 'video_page.html';
+      });
+  });
+</script>
+
+
+
+
+    </div>
+  </div>
+
+      
+  <script>
+   
+    const images = ["https://res.cloudinary.com/jerrick/image/upload/v1557592993/dlqiyhyfojxdq16yyl2y.jpg", "https://ntvb.tmsimg.com/assets/p20959089_b_h10_af.jpg?w=960&h=540", "https://cloudfront-us-east-1.images.arcpublishing.com/gray/L2KVBQMHGNHGTC7RXLS32RGDMY.bmp"];
+    let currentImageIndex = 0;
+
+    
+    function switchImage() {
+      // Update the source of the image
+      document.getElementById('slideshow').src = images[currentImageIndex];
+
+      // Move to the next image
+      currentImageIndex++;
+      if (currentImageIndex >= images.length) {
+        currentImageIndex = 0; 
+      }
+    }
+
+    
+    setInterval(switchImage, 8000);
+  </script>
+
+<title>Current Day and Time</title>
+    <script>
+        // Function to get the current day and time
+        function getCurrentDateTime() {
+            const currentDate = new Date();
+            return currentDate.toString();
+        }
+
+        // Function to update the displayed day and time
+        function updateDayAndTime() {
+            const dateTimeElement = document.getElementById('currentDateTime');
+            dateTimeElement.innerText = getCurrentDateTime();
+        }
+
+        // Call updateDayAndTime function every second to keep the time updated
+        setInterval(updateDayAndTime, 1000);
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Day and Time</h1>
+    <div id="currentDateTime"></div>
+</body>
+
+<title>Custom Alert</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- The custom modal -->
+<div id="customAlertModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="hideCustomAlert()">&times;</span>
+        <p id="alertMessage">Are you still there?</p>
+        <p id="countdown"></p>
+        <button onclick="closeCustomAlert()">Yes</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
